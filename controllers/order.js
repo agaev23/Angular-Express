@@ -7,9 +7,9 @@ module.exports.getAll = async function (req, res) {
     };
 
     if (req.query.start) {
-       query.date = {
-           $gte: req.query.start
-       }
+        query.date = {
+            $gte: req.query.start
+        }
     }
 
     if (req.query.end) {
@@ -45,7 +45,6 @@ module.exports.create = async function (req, res) {
             .sort({date: -1});
 
         const maxOrder = lastOrder ? lastOrder.order : 0;
-
         const order = await new Order({
             list: req.body.list,
             user: req.user.id,
