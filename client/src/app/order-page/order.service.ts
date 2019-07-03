@@ -1,7 +1,9 @@
 import {Injectable} from '@angular/core';
 import {OrderPosition, Position} from '../shared/interfaces';
 
-@Injectable()
+@Injectable({
+  providedIn: 'root'
+})
 export class OrderService{
 
   public list: OrderPosition[] = [];
