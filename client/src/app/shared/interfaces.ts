@@ -38,3 +38,32 @@ export interface OrderPosition {
   quantity: number,
   _id?: string;
 }
+
+export interface Filter {
+  start?: Date,
+  end?: Date,
+  order?: number
+}
+
+export interface OverviewPage {
+  orders: OverviewPageItem,
+  gain: OverviewPageItem
+}
+
+export interface OverviewPageItem {
+  percent: number,
+  compare: number,
+  yesterday: number,
+  isHigher: boolean
+}
+
+export interface AnalyticPage {
+  average: number,
+  chart: AnalyticsChartItem[]
+}
+
+export interface AnalyticsChartItem {
+  gain: number,
+  order: number,
+  label: number
+}
